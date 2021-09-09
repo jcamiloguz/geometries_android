@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".calcGeometry">
+
+    <Button
+        android:id="@+id/backBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text=""
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="10dp"
+        android:background="@drawable/back_vector"
+        android:onClick="back"
+        />
+    <TextView
+        android:id="@+id/titleCg"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/backBtn"
+        android:text="Calcuting  Triangle "
+        android:textSize="30dp"
+        />
+    <TextView
+        android:id="@+id/tri1label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/titleCg"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="40dp"
+        android:text="Triangle width"/>
+
+    <EditText
+        android:id="@+id/tri1data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@+id/tri1label"
+        tools:layout_editor_absoluteX="40dp" />
+    <TextView
+        android:id="@+id/tri2label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tri1data"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="40dp"
+        android:text="Triangle height"/>
+
+    <EditText
+        android:id="@+id/tri2data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@+id/tri2label"
+        tools:layout_editor_absoluteX="40dp" />
+
+    <TextView
+        android:id="@+id/triResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/triCalc"
+        android:text="Result :"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="40dp"
+        />
+
+    <Button
+        android:id="@+id/triCalc"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:onClick="calcTri"
+        android:text="Calculete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
